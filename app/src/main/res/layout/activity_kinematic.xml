@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fractured.vande.physicscalculusnow.KinematicActivity">
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:onClick="onCalculate"
+        android:text="@string/button_calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editInitialVelocity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/text_initialVel"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/editFinalVelocity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/text_finalVel"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editInitialVelocity" />
+
+    <EditText
+        android:id="@+id/editInitialPos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/text_intialPos"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFinalVelocity" />
+
+    <EditText
+        android:id="@+id/editFinalPos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/text_finalPos"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editInitialPos" />
+
+    <EditText
+        android:id="@+id/editInitialTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/text_initialTime"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFinalPos" />
+
+    <EditText
+        android:id="@+id/editFinalTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/text_finalTime"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editInitialTime" />
+
+    <EditText
+        android:id="@+id/editAcceleration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/text_acceleration"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFinalTime" />
+
+    <Switch
+        android:id="@+id/switchVel1"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:onClick="intitialVelocitySwitch"
+        android:text="@string/switch_solve"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editInitialVelocity"
+        app:layout_constraintEnd_toStartOf="@+id/editInitialVelocity"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switchVel2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:onClick="finalVelocitySwitch"
+        android:text="@string/switch_solve"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editFinalVelocity"
+        app:layout_constraintEnd_toStartOf="@+id/editFinalVelocity"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switchPos1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:onClick="intitialPositionSwitch"
+        android:text="@string/switch_solve"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editInitialPos"
+        app:layout_constraintEnd_toStartOf="@+id/editInitialPos"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switchPos2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:onClick="finalPositionSwitch"
+        android:text="@string/switch_solve"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editFinalPos"
+        app:layout_constraintEnd_toStartOf="@+id/editFinalPos"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switchTime1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:onClick="initialTimeSwitch"
+        android:text="@string/switch_solve"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editInitialTime"
+        app:layout_constraintEnd_toStartOf="@+id/editInitialTime"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switchTime2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:onClick="finalTimeSwitch"
+        android:text="@string/switch_solve"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editFinalTime"
+        app:layout_constraintEnd_toStartOf="@+id/editFinalTime"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switchAccel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:onClick="accelerationSwitch"
+        android:text="@string/switch_solve"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editAcceleration"
+        app:layout_constraintEnd_toStartOf="@+id/editAcceleration"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/text_solveLimitMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_metricOnlyMeasurements"
+        app:layout_constraintBottom_toTopOf="@+id/button_calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAcceleration" />
+
+</android.support.constraint.ConstraintLayout>

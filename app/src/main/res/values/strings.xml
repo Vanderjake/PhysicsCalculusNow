@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Physics Calculus Now</string>
+    <string name="button_kinematic">Kinematic Problem (WIP)</string>
+    <string name="button_energy">Energy Problem (WIP, 2)</string>
+    <string name="button_momentum">Momentum Problem (WIP, 3)</string>
+    <string name="button_calculate">Calculate</string>
+    <string name="switch_missing">Missing?</string>
+    <string name="switch_solve">To Solve:</string>
+    <string name="text_initialVel">Initial Velocity</string>
+    <string name="text_finalVel">Final Velocity</string>
+    <string name="text_intialPos">Initial Position</string>
+    <string name="text_finalPos">Final Position</string>
+    <string name="text_initialTime">Initial Time</string>
+    <string name="text_finalTime">Final Time</string>
+    <string name="text_acceleration">Acceleration (Constant)</string>
+    <string name="text_solveLimitMessage">Can Solve up to 2 Missing Values</string>
+    <string name="text_metricOnlyMeasurements">Assume Metric Measuments</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_missingDialog">Not Enough Known Variables</string>
+    <string name="simple_ok">Ok</string>
+    <string name="text_infoNotEntered">Please Enter Remaining Information</string>
+</resources>
